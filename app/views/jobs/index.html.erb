@@ -21,8 +21,8 @@
           <td><%= job.min %></td>
           <td><%= job.email %></td>
           <td>
-              <%= link_to("修改", edit_job_path(job), class: "btn btn-sm btn-default")%>
-              <%= link_to("删除", job_path(job),    class: "btn btn-sm btn-default",
+              <%= link_to("Edit", edit_job_path(job), class: "btn btn-sm btn-default")%>
+              <%= link_to("Delete", job_path(job),    class: "btn btn-sm btn-default",
                           method: :delete, data: { confirm: "您确定要删除吗?" } )%>
           </td>
         </tr>
