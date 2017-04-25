@@ -10,6 +10,7 @@
         <td>薪资上限</td>
         <td>薪资下限</td>
         <td>联系方式</td>
+        <td>创建者</td>
       </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@
           <td><%= job.max %></td>
           <td><%= job.min %></td>
           <td><%= job.email %></td>
+          <td> <%= job.user.email %> </td>
           <td>
               <%= link_to("修改", edit_job_path(job), class: "btn btn-sm btn-default")%>
               <%= link_to("删除", job_path(job),    class: "btn btn-sm btn-default",
