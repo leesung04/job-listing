@@ -19,8 +19,9 @@ class JobsController < ApplicationController
     params.require(:job).permit(:title, :description, :max, :min, :email)
   end
 
-
-
+  def edit
+   @job = Job.find(params[:id])
+  end
 
 
 

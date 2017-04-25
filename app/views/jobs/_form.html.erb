@@ -1,0 +1,32 @@
+<%= form_for @job do |f| %>
+  <% if @job.errors.any? %>
+    <ul>
+        <% @job.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+<% end %>
+
+
+    职位
+      <%= f.text_field :title %>
+      <br>
+    描述
+      <br>
+      <%= f.text_area :description %>
+      <br>
+    薪资上限
+      <br>
+      <%= f.text_area :max %>
+      <br>
+    薪资下限
+      <br>
+      <%= f.text_area :min %>
+      <br>
+    联系方式
+      <br>
+      <%= f.text_area :email %>
+      <br>
+
+      <%= f.submit "提交", :disable_with => '提交中...请耐心等候' %>
+<% end %>
