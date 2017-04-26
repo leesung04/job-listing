@@ -3,8 +3,8 @@ class CreateJobs < ActiveRecord::Migration[5.0]
     create_table :jobs do |t|
       t.string :title
       t.text :description
-      t.text :max
-      t.text :min
+      t.integer :max
+      t.integer :min
       t.text :email
 
       t.timestamps
