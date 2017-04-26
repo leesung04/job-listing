@@ -1,0 +1,12 @@
+<h1> 修改职位信息 </h1>
+
+<%= simple_form_for [:admin, @job ] do |f| %>
+
+<%= f.input :title, :label => "职位" %>
+<%= f.input :description, :label => "描述" %>
+<%= f.input :max, :label => "工资上限" %>
+<%= f.input :min, :label => "工资下限" %>
+<%= f.input :email, :label => "联系方式" %>
+
+  <%= f.submit "提交" %>
+<% end %>
