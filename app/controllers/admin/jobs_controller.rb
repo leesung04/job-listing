@@ -46,18 +46,13 @@ class Admin::JobsController < ApplicationController
   end
 
 
-  def require_is_admin
-    if !current_user.admin?
-      flash[:alert] = '对不起, 您不是管理员！'
-      redirect_to root_path
-    end
-  end
+
 
 
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :max, :min, :email)
+    params.require(:job).permit(:title, :description, :max, :min, :email, :is_hidden)
   end
 
 
